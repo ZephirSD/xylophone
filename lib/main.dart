@@ -21,93 +21,30 @@ class Xylo extends StatefulWidget {
 
 class _XyloState extends State<Xylo> {
   AudioCache player = AudioCache();
+  ChangeNote(Color? couleur, String fichier) {
+    return Expanded(
+      child: FlatButton(
+        padding: EdgeInsets.zero,
+        onPressed: () {
+          player.play(fichier);
+        },
+        child: Container(color: couleur),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
         child: Column(
       children: [
-        Expanded(
-          child: FlatButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              player.play('note1.wav');
-              print('test');
-            },
-            child: Container(
-              color: Colors.red,
-            ),
-          ),
-        ),
-        Expanded(
-          child: FlatButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              player.play('note2.wav');
-              print('test');
-            },
-            child: Container(color: Colors.orange),
-          ),
-        ),
-        Expanded(
-          child: FlatButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              player.play('note3.wav');
-              print('test');
-            },
-            child: Container(
-              color: Colors.yellow,
-            ),
-          ),
-        ),
-        Expanded(
-          child: FlatButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              player.play('note4.wav');
-              print('test');
-            },
-            child: Container(
-              color: Colors.green,
-            ),
-          ),
-        ),
-        Expanded(
-          child: FlatButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              player.play('note5.wav');
-              print('test');
-            },
-            child: Container(
-              color: Colors.teal,
-            ),
-          ),
-        ),
-        Expanded(
-          child: FlatButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              player.play('note6.wav');
-              print('test');
-            },
-            child: Container(
-              color: Colors.blue,
-            ),
-          ),
-        ),
-        Expanded(
-          child: FlatButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              player.play('note7.wav');
-              print('test');
-            },
-            child: Container(
-              color: Colors.purple,
-            ),
-          ),
-        ),
+        ChangeNote(Colors.red, 'note1.wav'),
+        ChangeNote(Colors.orange, 'note2.wav'),
+        ChangeNote(Colors.yellow, 'note3.wav'),
+        ChangeNote(Colors.green, 'note4.wav'),
+        ChangeNote(Colors.teal, 'note5.wav'),
+        ChangeNote(Colors.blue, 'note6.wav'),
+        ChangeNote(Colors.purple, 'note7.wav'),
       ],
     ));
   }
