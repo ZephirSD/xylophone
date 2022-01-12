@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   return runApp(
@@ -19,6 +20,7 @@ class Xylo extends StatefulWidget {
 }
 
 class _XyloState extends State<Xylo> {
+  AudioCache player = AudioCache();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +28,9 @@ class _XyloState extends State<Xylo> {
       children: [
         Expanded(
           child: FlatButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
+              player.play('note1.wav');
               print('test');
             },
             child: Container(
@@ -36,7 +40,9 @@ class _XyloState extends State<Xylo> {
         ),
         Expanded(
           child: FlatButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
+              player.play('note2.wav');
               print('test');
             },
             child: Container(color: Colors.orange),
@@ -44,7 +50,9 @@ class _XyloState extends State<Xylo> {
         ),
         Expanded(
           child: FlatButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
+              player.play('note3.wav');
               print('test');
             },
             child: Container(
@@ -54,7 +62,9 @@ class _XyloState extends State<Xylo> {
         ),
         Expanded(
           child: FlatButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
+              player.play('note4.wav');
               print('test');
             },
             child: Container(
@@ -64,7 +74,9 @@ class _XyloState extends State<Xylo> {
         ),
         Expanded(
           child: FlatButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
+              player.play('note5.wav');
               print('test');
             },
             child: Container(
@@ -74,7 +86,9 @@ class _XyloState extends State<Xylo> {
         ),
         Expanded(
           child: FlatButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
+              player.play('note6.wav');
               print('test');
             },
             child: Container(
@@ -84,7 +98,9 @@ class _XyloState extends State<Xylo> {
         ),
         Expanded(
           child: FlatButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
+              player.play('note7.wav');
               print('test');
             },
             child: Container(
